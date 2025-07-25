@@ -7,8 +7,8 @@ import (
 // CmdAPI calls an API in an Xray process
 var CmdAPI = &base.Command{
 	UsageLine: "{{.Exec}} api",
-	Short:     "Call an API in an Xray process",
-	Long: `{{.Exec}} {{.LongName}} provides tools to manipulate Xray via its API.
+	Short:     "Call an API in a Caddy process",
+	Long: `{{.Exec}} {{.LongName}} provides tools to manipulate Caddy via its API.
 `,
 	Commands: []*base.Command{
 		cmdRestartLogger,
