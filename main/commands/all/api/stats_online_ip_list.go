@@ -10,7 +10,7 @@ var cmdOnlineStatsIpList = &base.Command{
 	UsageLine:   "{{.Exec}} api statsonlineiplist [--server=127.0.0.1:8080] [-email '' | -all [-include-traffic] [-reset]]",
 	Short:       "Retrieve a user's online IP addresses and access times",
 	Long: `
-Retrieve the online IP addresses and corresponding access timestamps for a user from Xray.
+Retrieve the online IP addresses and corresponding access timestamps for a user from Caddy.
 Use -all to retrieve all online users with their IPs and timestamps.
 
 Arguments:
@@ -35,7 +35,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -email "xray@love.com"
+	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -email "caddy@caddyserver.com"
 	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -all
 	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -all -include-traffic
 `,

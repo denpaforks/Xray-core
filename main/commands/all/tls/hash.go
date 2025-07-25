@@ -17,7 +17,7 @@ var cmdHash = &base.Command{
 	UsageLine: "{{.Exec}} tls hash",
 	Short:     "Calculate TLS certificate hash.",
 	Long: `
-	xray tls hash --cert <cert.pem>
+	caddy tls hash --cert <cert.pem>
 	Calculate TLS certificate hash.
 	`,
 }
