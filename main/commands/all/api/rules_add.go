@@ -15,11 +15,11 @@ var cmdAddRules = &base.Command{
 	UsageLine:   "{{.Exec}} api adrules [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
 	Short:       "Add routing rules",
 	Long: `
-Add routing rules to Xray.
+Add routing rules to Caddy.
 
 Arguments:
 	<c1.json> [c2.json]...
-		The configs with the rules to be added. Must be in the xray config format and must have the "routing" field
+		The configs with the rules to be added. Must be in the caddy config format and must have the "routing" field
 
 	-s, -server <server:port>
 		The API server address. Default 127.0.0.1:8080
