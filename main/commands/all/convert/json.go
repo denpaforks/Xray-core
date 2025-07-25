@@ -21,7 +21,7 @@ Convert ONE typedMessage to json.
 Where typedMessage file need to be in the following format:
 
 {
-  "type": "xray.proxy.shadowsocks.Account",
+  "type": "caddy.proxy.shadowsocks.Account",
   "value": "CgMxMTEQBg=="
 }
 
