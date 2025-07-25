@@ -8,24 +8,24 @@ import (
 )
 
 const (
-	ConfigLocation  = "xray.location.config"
-	ConfdirLocation = "xray.location.confdir"
-	AssetLocation   = "xray.location.asset"
-	CertLocation    = "xray.location.cert"
+	ConfigLocation  = "caddy.location.config"
+	ConfdirLocation = "caddy.location.confdir"
+	AssetLocation   = "caddy.location.asset"
+	CertLocation    = "caddy.location.cert"
 
-	UseReadV         = "xray.buf.readv"
-	UseFreedomSplice = "xray.buf.splice"
-	UseVmessPadding  = "xray.vmess.padding"
-	UseCone          = "xray.cone.disabled"
+	UseReadV         = "caddy.buf.readv"
+	UseFreedomSplice = "caddy.buf.splice"
+	UseVmessPadding  = "caddy.vmess.padding"
+	UseCone          = "caddy.cone.disabled"
 
-	BufferSize           = "xray.ray.buffer.size"
-	BrowserDialerAddress = "xray.browser.dialer"
-	XUDPLog              = "xray.xudp.show"
-	XUDPBaseKey          = "xray.xudp.basekey"
+	BufferSize           = "caddy.ray.buffer.size"
+	BrowserDialerAddress = "caddy.browser.dialer"
+	XUDPLog              = "caddy.xudp.show"
+	XUDPBaseKey          = "caddy.xudp.basekey"
 
-	TunFdKey = "xray.tun.fd"
+	TunFdKey = "caddy.tun.fd"
 
-	MphCachePath = "xray.mph.cache"
+	MphCachePath = "caddy.mph.cache"
 )
 
 type EnvFlag struct {
