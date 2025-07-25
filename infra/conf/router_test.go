@@ -55,8 +55,8 @@ func TestToCidrList(t *testing.T) {
 	common.Must(filesystem.CopyFile(filepath.Join(tempDir, "geoip.dat"), geoipPath))
 	common.Must(filesystem.CopyFile(filepath.Join(tempDir, "geoiptestrouter.dat"), geoipPath))
 
-	os.Setenv("xray.location.asset", tempDir)
-	defer os.Unsetenv("xray.location.asset")
+	os.Setenv("caddy.location.asset", tempDir)
+	defer os.Unsetenv("caddy.location.asset")
 
 	ips := StringList([]string{
 		"geoip:us",

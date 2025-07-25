@@ -10,7 +10,7 @@ var cmdOnlineStatsIpList = &base.Command{
 	UsageLine:   "{{.Exec}} api statsonlineiplist [--server=127.0.0.1:8080] [-email '']",
 	Short:       "Retrieve a user's online IP addresses and access times",
 	Long: `
-Retrieve the online IP addresses and corresponding access timestamps for a user from Xray.
+Retrieve the online IP addresses and corresponding access timestamps for a user from Caddy.
 
 Arguments:
 

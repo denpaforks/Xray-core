@@ -24,22 +24,22 @@ import (
 
 var cmdRun = &base.Command{
 	UsageLine: "{{.Exec}} run [-c config.json] [-confdir dir]",
-	Short:     "Run Xray with config, the default command",
+	Short:     "Run Caddy with config, the default command",
 	Long: `
-Run Xray with config, the default command.
+Run Caddy with config, the default command.
 
 The -config=file, -c=file flags set the config files for 
-Xray. Multiple assign is accepted.
+Caddy. Multiple assign is accepted.
 
 The -confdir=dir flag sets a dir with multiple json config
 
 The -format=json flag sets the format of config files. 
 Default "auto".
 
-The -test flag tells Xray to test config files only, 
+The -test flag tells Caddy to test config files only, 
 without launching the server.
 
-The -dump flag tells Xray to print the merged config.
+The -dump flag tells Caddy to print the merged config.
 	`,
 }
 
@@ -51,15 +51,15 @@ func init() {
 var (
 	configFiles cmdarg.Arg // "Config file for Xray.", the option is customed type, parse in main
 	configDir   string
-	dump        = cmdRun.Flag.Bool("dump", false, "Dump merged config only, without launching Xray server.")
-	test        = cmdRun.Flag.Bool("test", false, "Test config file only, without launching Xray server.")
+	dump        = cmdRun.Flag.Bool("dump", false, "Dump merged config only, without launching Caddy server.")
+	test        = cmdRun.Flag.Bool("test", false, "Test config file only, without launching Caddy server.")
 	format      = cmdRun.Flag.String("format", "auto", "Format of input file.")
 
 	/* We have to do this here because Golang's Test will also need to parse flag, before
 	 * main func in this file is run.
 	 */
 	_ = func() bool {
-		cmdRun.Flag.Var(&configFiles, "config", "Config path for Xray.")
+		cmdRun.Flag.Var(&configFiles, "config", "Config path for Caddy.")
 		cmdRun.Flag.Var(&configFiles, "c", "Short alias of -config")
 		cmdRun.Flag.StringVar(&configDir, "confdir", "", "A dir with multiple json config")
 
